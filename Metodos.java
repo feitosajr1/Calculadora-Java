@@ -81,8 +81,33 @@ public class Metodos {
 
     public static void main (String entrada[]) {
         int n1, n2;
+        String msgRet;
+        char op = '0';
         n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número:"));
         n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro numero:"));
         opcoes(n1, n2);
+
+        msgRet = "Deseja realizar outra operação? ";
+        msgRet = msgRet + "\nDigite 1 para relacionar os mesmos números";
+        msgRet = msgRet + "\nDigite 2 para novos números";
+        msgRet = msgRet + "\nDigite 3 para sair";
+        
+        op = (JOptionPane.showInputDialog(msgRet)).charAt(0);
+
+        switch(op) {
+            case '1': {
+                opcoes(n1,n2);
+                break;
+            }
+            case '2': {
+                main(entrada);
+                break;
+            }
+            case '3': {
+                JOptionPane.showMessageDialog(null, "Obrigado por usar o programa! ");
+                break;
+            }
+            default: JOptionPane.showMessageDialog(null, "Opção invalida, tente novamente");
+        }
     } 
 }
