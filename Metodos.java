@@ -2,42 +2,48 @@ import javax.swing.*;
 
 public class Metodos {
 
-    public static double soma (int x, int y) {
+    public static void soma (int x, int y) {
         double res;
-        res = x + y;
-        
-        return res; 
+        res = (double)x + (double)y;
+        JOptionPane.showMessageDialog(null, "A soma de " + x + " e " + y + " é: " + res + "\n");
     } 
 
-    public static double diferenca (int x, int y) {
+    public static void diferenca (int x, int y) {
         double res;
-        res = x-y;
-
-        return res;
+        res = (double)x - (double)y;
+        JOptionPane.showMessageDialog(null, "A subtração de " + x + " e " + y + " é: " + res + "\n");
     } 
 
-    public static double produto (int x, int y) {
+    public static void produto (int x, int y) {
         double res;
-        res = x * y;
-
-        return res; 
+        res = (double)x * (double)y;
+        JOptionPane.showMessageDialog(null, "A produto de " + x + " e " + y + " é: " + res + "\n");
     } 
     
-    public static double quociente (int x, int y) {
-        double res;
-        res = x / y;
+    public static void quociente (int x, int y) {
+        double res, resto, ext;
+        String msg;
+        if ((double)x % (double)y == 0) {
+            res = (double)x / (double)y;
+            JOptionPane.showMessageDialog(null, "A divisão de " + x + " por " + y + " é: " + res + "\n");
+        } 
+        else {
+            res = (int)x / (int)y;
+            resto = (int)x % (int)y;
+            ext = (double)x / (double)y;
 
-        return res;
+            msg = "A divisão gera resto";
+            msg = msg + "\nA divisão inteira de " + x + " com " + y + " é " + res + " com resto " + resto;
+            msg = msg + "\nA divisão real de " + x + " com " + y + " é " + ext;
+            JOptionPane.showInputDialog(null, msg);
+        }
     }
 
     public static void main (String entrada[]) {
         
 // Declaração de variaveis.
         int n1, n2;
-        double r;
         char op = '0';
-        String msg;
-
         String msgOp = "Escolha opção:";
         msgOp = msgOp +"\n1 - Para somar os números: ";
         msgOp = msgOp +"\n2 - Para subtração: ";
@@ -53,35 +59,22 @@ public class Metodos {
 // Processamento
         switch (op){
             case '1': {
-                r = soma(n1,n2);
-                msg = "A soma de " + n1 + " e " + n2 + " é: " + r + "\n";
-                JOptionPane.showMessageDialog(null, msg);
-                System.out.println("\n" + msg + "\n");
+                soma(n1,n2);
                 break;
             }
 
             case '2': {
-                r = diferenca(n1,n2);
-                msg =  "A diferença de " + n1 + " e " + n2 + " é: " + r + "\n";
-                JOptionPane.showMessageDialog(null, msg);
-                System.out.println("\n" + msg + "\n");
+                diferenca(n1,n2);
                 break;
-
             }
 
             case '3': {
-                r = produto(n1,n2);
-                msg = "O produto de " + n1 + " e " + n2 + " é: " + r + "\n";
-                JOptionPane.showMessageDialog(null, msg);
-                System.out.println("\n" + msg + "\n");
+                produto(n1,n2);
                 break;
             }
 
             case '4': {
-                r = quociente(n1,n2);
-                msg = "O quociente de " + n1 + " e " + n2 + " é: " + r;
-                JOptionPane.showMessageDialog(null, msg);
-                System.out.println("\n" + msg + "\n");
+                quociente(n1,n2);
                 break;
             }
 
