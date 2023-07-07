@@ -39,10 +39,7 @@ public class Metodos {
         }
     }
 
-    public static void main (String entrada[]) {
-        
-// Declaração de variaveis.
-        int n1, n2;
+    public static void opcoes (int x, int y) {
         char op = '0';
         String msgOp = "Escolha opção:";
         msgOp = msgOp +"\n1 - Para somar os números: ";
@@ -51,38 +48,41 @@ public class Metodos {
         msgOp = msgOp +"\n4 - Para divisão: ";
         msgOp = msgOp +"\n5 - Para sair: ";
 
-// Entrada de dados 
-        n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número:"));
-        n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro numero:"));
         op = (JOptionPane.showInputDialog(msgOp)).charAt(0);
-
-// Processamento
         switch (op){
             case '1': {
-                soma(n1,n2);
+                soma(x,y);
                 break;
             }
-
+        
             case '2': {
-                diferenca(n1,n2);
+                diferenca(x,y);
                 break;
             }
-
+        
             case '3': {
-                produto(n1,n2);
+                produto(x,y);
                 break;
             }
-
+        
             case '4': {
-                quociente(n1,n2);
+                quociente(x,y);
                 break;
             }
-
+        
             case '5': {
                 JOptionPane.showMessageDialog(null, "Obrigado por usar o programa !");
                 break;
             }
             default: JOptionPane.showMessageDialog(null, "Opção invalida, tente novamente.");
         }
+
+    }
+
+    public static void main (String entrada[]) {
+        int n1, n2;
+        n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número:"));
+        n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro numero:"));
+        opcoes(n1, n2);
     } 
 }
