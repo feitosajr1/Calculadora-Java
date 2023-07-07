@@ -35,7 +35,7 @@ public class Metodos {
             msg = "A divisão gera resto";
             msg = msg + "\nA divisão inteira de " + x + " com " + y + " é " + res + " com resto " + resto;
             msg = msg + "\nA divisão real de " + x + " com " + y + " é " + ext;
-            JOptionPane.showInputDialog(null, msg);
+            JOptionPane.showMessageDialog(null, msg);
         }
     }
 
@@ -71,7 +71,6 @@ public class Metodos {
             }
         
             case '5': {
-                JOptionPane.showMessageDialog(null, "Obrigado por usar o programa !");
                 break;
             }
             default: JOptionPane.showMessageDialog(null, "Opção invalida, tente novamente.");
@@ -91,23 +90,26 @@ public class Metodos {
         msgRet = msgRet + "\nDigite 1 para relacionar os mesmos números";
         msgRet = msgRet + "\nDigite 2 para novos números";
         msgRet = msgRet + "\nDigite 3 para sair";
-        
-        op = (JOptionPane.showInputDialog(msgRet)).charAt(0);
 
-        switch(op) {
-            case '1': {
-                opcoes(n1,n2);
-                break;
+        do {
+            op = (JOptionPane.showInputDialog(msgRet)).charAt(0);
+            switch(op) {
+                case '1': {
+                    opcoes(n1,n2);
+                    break;
+                }
+                case '2': {
+                    main(entrada);
+                    break;
+                }
+                case '3': {
+                    JOptionPane.showMessageDialog(null, "Obrigado por usar o programa! ");
+                    break;
+                }
+                default: JOptionPane.showMessageDialog(null, "Opção invalida, tente novamente");
             }
-            case '2': {
-                main(entrada);
-                break;
-            }
-            case '3': {
-                JOptionPane.showMessageDialog(null, "Obrigado por usar o programa! ");
-                break;
-            }
-            default: JOptionPane.showMessageDialog(null, "Opção invalida, tente novamente");
-        }
+
+        } while (op != '3');
+        
     } 
 }
