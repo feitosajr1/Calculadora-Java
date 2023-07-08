@@ -13,8 +13,7 @@ Então, se tiver alguma sugestão de melhoria, ou de outra forma de se desafiar 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#Para-executar">Para executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#Para-executar">Para executar</a>
 </p>
 
 ## Tecnologias
@@ -40,7 +39,7 @@ O JDK você pode baixar [NESSE LINK](https://www.oracle.com/br/java/technologies
 
 [AQUI](https://www.youtube.com/watch?v=NX_i1sLzz5I) tem um vídeo do queridissimo professor Perini ensinando como instalar e configurar as variaveis de ambiente.
 
-Depois de baixar o código você precisa abrir o CMD dentro da pasta que está o código e executar o comando { javac Calculadora.java } para copilar e depois o comando { java Calculadora } para executar e a janela de entrada de dados irá aparecer. 
+Depois de baixar o código você precisa abrir o CMD dentro da pasta que está o código e executar o comando { javac Calculadora.java } para copilar e depois o comando { java Calculadora } para executar e a janela de entrada de dados irá aparecer.
 
 <p align="center">
   <img alt="img" src="./github/1.png" width="20%">
