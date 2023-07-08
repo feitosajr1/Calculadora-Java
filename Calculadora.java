@@ -1,6 +1,6 @@
 import javax.swing.*; 
 
-public class Metodos {
+public class Calculadora {
 
     public static void soma (int x, int y) {
         double res;
